@@ -72,7 +72,7 @@ export default {
       auth.login(this.user).then(response => {
         if (response.status) {
           localStorage.setItem('user', JSON.stringify(response.data))
-          this.$router.push({ name: 'dashboard.home-1' })
+          this.$router.push({ name: 'dashboard.home-2' })
         } else if (response.data.errors.length > 0) {
           this.$refs.form.setErrors(response.data.errors)
         }
@@ -96,7 +96,7 @@ export default {
         })
         localStorage.setItem('user', JSON.stringify(selectedUser))
         localStorage.setItem('access_token', selectedUser.token)
-        this.$router.push({ name: 'dashboard.home-1' })
+        this.$router.push({ name: 'dashboard.home-2' })
       }
     },
     firebaseLogin () {
@@ -114,7 +114,7 @@ export default {
           }
         })
         localStorage.setItem('user', JSON.stringify(firebaseUser))
-        this.$router.push({ name: 'dashboard.home-1' })
+        this.$router.push({ name: 'dashboard.home-2' })
       }).catch((err) => {
         if (err.code === 'auth/user-not-found') {
           core.showSnackbar('error', 'These credentials do not match our records.')
