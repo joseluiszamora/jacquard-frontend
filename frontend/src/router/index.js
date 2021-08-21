@@ -65,11 +65,11 @@ const EcommerceDetail = () => import('../views/Apps/Ecommerce/Detail')
 const ChatIndex = () => import('../views/Apps/Chat/Index')
 const ProjectBoard = () => import('../views/Apps/ProjectManagement/ProjectBoard')
 /* Icon Views */
-const IconDripicons = () => import('../views/Icons/IconDripicons')
-const IconFontawesome5 = () => import('../views/Icons/IconFontawesome5')
-const IconLineAwesome = () => import('../views/Icons/IconLineAwesome')
-const IconRemixicon = () => import('../views/Icons/IconRemixicon')
-const IconUnicons = () => import('../views/Icons/IconUnicons')
+// const IconDripicons = () => import('../views/Icons/IconDripicons')
+// const IconFontawesome5 = () => import('../views/Icons/IconFontawesome5')
+// const IconLineAwesome = () => import('../views/Icons/IconLineAwesome')
+// const IconRemixicon = () => import('../views/Icons/IconRemixicon')
+// const IconUnicons = () => import('../views/Icons/IconUnicons')
 /* Tables Views */
 const TablesBasic = () => import('../views/Tables/TablesBasic')
 const EditableTable = () => import('../views/Tables/EditableTable')
@@ -273,7 +273,7 @@ const tableChildRoute = (prop) => [
   }
 ]
 
-const iconChildRoute = (prop) => [
+/* const iconChildRoute = (prop) => [
   {
     path: 'dripicons',
     name: prop + '.dripicons',
@@ -304,7 +304,7 @@ const iconChildRoute = (prop) => [
     meta: { auth: true, name: 'Unicon' },
     component: IconUnicons
   }
-]
+] */
 
 const chartChildRoutes = (prop) => [
   {
@@ -568,28 +568,28 @@ const routes = [
   {
     path: '/',
     name: 'dashboard',
-    component: Layout1,
+    component: Layout2,
     meta: { auth: true },
     children: [
       {
         path: '',
-        name: 'dashboard.home-1',
-        meta: { auth: true, name: 'Home 1' },
-        component: Dashboard1
+        name: 'dashboard.home-2',
+        meta: { auth: true, name: 'Home' },
+        component: Dashboard2
       }
     ]
   },
   {
     path: '',
     name: 'dashboard',
-    component: Layout2,
+    component: Layout1,
     meta: { auth: true },
     children: [
       {
-        path: 'home-2',
-        name: 'dashboard.home-2',
-        meta: { auth: true, name: 'Home 2' },
-        component: Dashboard2
+        path: 'home-1',
+        name: 'dashboard.home-1',
+        meta: { auth: true, name: 'Home 1' },
+        component: Dashboard1
       }
     ]
   },
@@ -670,13 +670,13 @@ const routes = [
     meta: { auth: true },
     children: chartChildRoutes('chart')
   },
-  {
+  /* {
     path: '/icon',
     name: 'icon',
     component: Layout2,
     meta: { auth: true },
     children: iconChildRoute('icon')
-  },
+  }, */
   {
     path: '/auth',
     name: 'auth1',

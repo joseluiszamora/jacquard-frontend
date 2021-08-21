@@ -1,32 +1,23 @@
 [
   {
-    "title": "Dashboard",
-    "name": "sidebar.dashboard",
-    "is_heading": true,
-    "is_active": false,
-    "class_name": "",
-    "is_icon_class": true,
-    "icon": ""
-  },
-  {
-    "title": "Dashboard 1",
-    "name": "sidebar.dashboard1",
+    "title": "Inicio",
+    "name": "Inicio",
     "is_heading": false,
     "is_active": false,
     "link": {
-      "name": "dashboard.home-1"
+      "name": "dashboard.home-2"
     },
     "class_name": "",
     "is_icon_class": true,
     "icon": "ri-home-4-line"
   },
   {
-    "title": "Dashboard 2",
-    "name": "sidebar.dashboard2",
+    "title": "Usuarios",
+    "name": "usuarios",
     "is_heading": false,
     "is_active": false,
     "link": {
-      "name": "dashboard.home-2"
+      "name": "table.editable"
     },
     "class_name": "",
     "is_icon_class": true,

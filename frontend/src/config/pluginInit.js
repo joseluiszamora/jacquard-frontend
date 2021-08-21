@@ -4,7 +4,7 @@ import Store from '../store/index'
 import Route from '../router/index'
 import counterUp from 'counterup2'
 require('waypoints/lib/noframework.waypoints.min')
-export const APPNAME = 'Vito'
+export const APPNAME = 'Jacquard'
 
 export const core = {
   index () {

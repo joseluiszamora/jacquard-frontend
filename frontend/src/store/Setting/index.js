@@ -6,7 +6,7 @@ import SideBarItems from '../../FackApi/json/GlobalSearch'
 const state = {
   horizontalMenu: false,
   miniSidebarMenu: false,
-  lang: { title: 'English', value: 'en', image: require('../../assets/images/small/flag-01.png') },
+  lang: { title: 'Español', value: 'sp', image: require('../../assets/images/small/flag-01.png') },
   langOption: [
     { title: 'English', value: 'en', image: require('../../assets/images/small/flag-01.png') },
     { title: 'Arabic', value: 'ar', image: require('../../assets/images/small/flag-500.png') },

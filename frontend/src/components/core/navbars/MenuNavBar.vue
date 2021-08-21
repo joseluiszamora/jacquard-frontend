@@ -27,7 +27,7 @@
                 <div class="iq-search-bar">
                   <form action="#" class="searchbox">
                     <input type="text" class="text search-input" style="cursor: pointer" @click="openSearch" v-model="globalSearch"
-                           placeholder="Type here to search...">
+                           placeholder="Buscar...">
                     <a class="search-link" href="#"><i class="ri-search-line"></i></a>
                     <GlobalSearch :search="globalSearch" @closeSearch="removeClass "/>
                   </form>

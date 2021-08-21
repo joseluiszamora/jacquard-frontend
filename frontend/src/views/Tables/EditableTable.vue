@@ -4,38 +4,38 @@
       <b-col md="12">
         <iq-card>
           <template v-slot:headerTitle>
-            <h4 class="card-title">Editable Table</h4>
+            <h4 class="card-title">Usuarios</h4>
           </template>
           <template v-slot:headerAction>
-            <b-button variant="primary" @click="add">Add New</b-button>
+            <b-button variant="primary" @click="add">Nuevo Usuario</b-button>
           </template>
           <template v-slot:body>
             <b-row>
               <b-col md="12" class="table-responsive">
                 <b-table bordered hover :items="rows" :fields="columns" foot-clone>
-                  <template v-slot:cell(name)="data">
-                    <span v-if="!data.item.editable">{{ data.item.name }}</span>
-                    <input type="text" v-model="data.item.name" v-else class="form-control">
+                  <template v-slot:cell(nombre)="data">
+                    <span v-if="!data.item.editable">{{ data.item.nombre }}</span>
+                    <input type="text" v-model="data.item.nombre" v-else class="form-control">
                   </template>
-                  <template v-slot:cell(position)="data">
-                    <span v-if="!data.item.editable">{{ data.item.position }}</span>
-                    <input type="text" v-model="data.item.position" v-else class="form-control">
+                  <template v-slot:cell(paterno)="data">
+                    <span v-if="!data.item.editable">{{ data.item.paterno }}</span>
+                    <input type="text" v-model="data.item.paterno" v-else class="form-control">
                   </template>
-                  <template v-slot:cell(office)="data">
-                    <span v-if="!data.item.editable">{{ data.item.office }}</span>
-                    <input type="text" v-model="data.item.office" v-else class="form-control">
+                  <template v-slot:cell(materno)="data">
+                    <span v-if="!data.item.editable">{{ data.item.materno }}</span>
+                    <input type="text" v-model="data.item.materno" v-else class="form-control">
                   </template>
-                  <template v-slot:cell(age)="data">
-                    <span v-if="!data.item.editable">{{ data.item.age }}</span>
-                    <input type="text" v-model="data.item.age" v-else class="form-control">
+                  <template v-slot:cell(email)="data">
+                    <span v-if="!data.item.editable">{{ data.item.email }}</span>
+                    <input type="text" v-model="data.item.email" v-else class="form-control">
                   </template>
-                  <template v-slot:cell(start_date)="data">
-                    <span v-if="!data.item.editable">{{ data.item.start_date }}</span>
-                    <input type="text" v-model="data.item.start_date" v-else class="form-control">
+                  <template v-slot:cell(documento)="data">
+                    <span v-if="!data.item.editable">{{ data.item.documento }}</span>
+                    <input type="text" v-model="data.item.documento" v-else class="form-control">
                   </template>
-                  <template v-slot:cell(salary)="data">
-                    <span v-if="!data.item.editable">{{ data.item.salary }}</span>
-                    <input type="text" v-model="data.item.salary" v-else class="form-control">
+                  <template v-slot:cell(perfil)="data">
+                    <span v-if="!data.item.editable">{{ data.item.perfil }}</span>
+                    <input type="text" v-model="data.item.perfil" v-else class="form-control">
                   </template>
                   <template v-slot:cell(action)="data">
                     <b-button variant=" iq-bg-success mr-1 mb-1" size="sm" @click="edit(data.item)" v-if="!data.item.editable"><i class="ri-ball-pen-fill m-0"></i></b-button>
@@ -67,12 +67,12 @@ export default {
     default () {
       return {
         id: this.rows.length,
-        name: '',
-        position: '',
-        office: '',
-        age: '',
-        start_date: '2011/04/25',
-        salary: '$0',
+        nombre: '',
+        paterno: '',
+        materno: '',
+        email: '',
+        documento: '',
+        perfil: '',
         editable: false
       }
     },
@@ -90,94 +90,94 @@ export default {
   data () {
     return {
       columns: [
-        { label: 'Name', key: 'name', class: 'text-left' },
-        { label: 'Position', key: 'position', class: 'text-left' },
-        { label: 'Office', key: 'office', class: 'text-left' },
-        { label: 'Age', key: 'age', class: 'text-left' },
-        { label: 'Start date', key: 'start_date', class: 'text-left' },
-        { label: 'Salary', key: 'salary', class: 'text-left' },
-        { label: 'Action', key: 'action', class: 'text-center' }
+        { label: 'Nombre', key: 'nombre', class: 'text-left' },
+        { label: 'Apellido Paterno', key: 'paterno', class: 'text-left' },
+        { label: 'Apellido Materno', key: 'materno', class: 'text-left' },
+        { label: 'Correo', key: 'email', class: 'text-left' },
+        { label: 'Documento', key: 'documento', class: 'text-left' },
+        { label: 'Perfil', key: 'perfil', class: 'text-left' },
+        { label: 'Acciones', key: 'action', class: 'text-center' }
       ],
       rows: [
         {
           id: 1,
-          name: 'Tiger Nixon',
-          position: 'System Architect',
-          office: 'Edinburgh',
-          age: '61',
-          start_date: '2011/04/25',
-          salary: '$320,800',
+          nombre: 'Juan',
+          paterno: 'Perez',
+          materno: 'Sanchez',
+          email: 'juan@jacqard.bo',
+          documento: '4589625',
+          perfil: '1',
           editable: false
         },
         {
           id: 2,
-          name: 'Garrett Winters',
-          position: 'Accountant',
-          office: 'Tokyo',
-          age: '63',
-          start_date: '2011/06/19',
-          salary: '$200,600',
+          nombre: 'Fernando',
+          paterno: 'Gutierrez',
+          materno: '',
+          email: 'fernando@jacqard.bo',
+          documento: '25987413',
+          perfil: '2',
           editable: false
         },
         {
           id: 3,
-          name: 'Ashton Cox',
-          position: 'Junior Technical Author',
-          office: 'San Francisco',
-          age: '69',
-          start_date: '2011/01/20',
-          salary: '$140,500',
+          nombre: 'Carol',
+          paterno: 'Gutierrez',
+          materno: 'Silva',
+          email: 'carol@jacqard.bo',
+          documento: '5984721',
+          perfil: '1',
           editable: false
         },
         {
           id: 4,
-          name: 'Cedric Kelly',
-          position: 'Senior Javascript Developer',
-          office: 'Edinburgh',
-          age: '42',
-          start_date: '2011/02/02',
-          salary: '$360,500',
+          nombre: 'Estela',
+          paterno: 'Mamani',
+          materno: 'Lopez',
+          email: 'estela@jacqard.bo',
+          documento: '5984721',
+          perfil: '1',
           editable: false
         },
         {
           id: 5,
-          name: 'Airi Satou',
-          position: 'Accountant',
-          office: 'Tokyo',
-          age: '39',
-          start_date: '2011/08/11',
-          salary: '$170,800',
+          nombre: 'Mery',
+          paterno: 'Quispe',
+          materno: '',
+          email: 'mery@jacqard.bo',
+          documento: '4158796',
+          perfil: '2',
           editable: false
         },
         {
-          id: 1,
-          name: 'Tiger Nixon',
-          position: 'System Architect',
-          office: 'Edinburgh',
-          age: '61',
-          start_date: '2011/04/25',
-          salary: '$320,800',
+          id: 6,
+          nombre: 'Esteban',
+          paterno: 'Quispe',
+          materno: '',
+          email: 'esteban@jacqard.bo',
+          documento: '41259876',
+          perfil: '2',
           editable: false
         },
 
         {
-          id: 5,
-          name: 'Airi Satou',
-          position: 'Accountant',
-          office: 'Tokyo',
-          age: '39',
-          start_date: '2011/08/11',
-          salary: '$170,800',
+          id: 7,
+          nombre: 'Kevin',
+          paterno: 'velasco',
+          materno: 'suxo',
+          email: 'kevin@jacqard.bo',
+          documento: '41259876',
+          perfil: '2',
           editable: false
         },
         {
-          id: 1,
-          name: 'Tiger Nixon',
-          position: 'System Architect',
-          office: 'Edinburgh',
-          age: '61',
-          start_date: '2011/04/25',
-          salary: '$320,800',
+          id: 8,
+          nombre: 'Nelia',
+          paterno: 'Rocabado',
+          materno: 'sanchez',
+          email: 'nelia@jacqard.bo',
+          documento: '234579',
+          perfil: '2',
           editable: false
         }
       ]

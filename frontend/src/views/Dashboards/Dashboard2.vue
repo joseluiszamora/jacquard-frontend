@@ -11,7 +11,7 @@
       <b-col lg="4">
         <iq-card class="iq-card-block iq-card-stretch iq-card-height" body-class="smaill-calender-home">
           <template v-slot:body>
-            <template v-if="lang.value == 'ar'">
+            <template v-if="lang.value == 'en'">
               <flat-pickr :config="arConfig" value="" class="d-none"/>
             </template>
             <template v-else>
@@ -23,7 +23,7 @@
       <b-col lg="3" md="6">
         <iq-card class="iq-card-block iq-card-stretch iq-card-height">
           <template v-slot:body>
-            <div class="text-center"><span>{{ $t('dashboard2.card1')}}</span></div>
+            <div class="text-center"><span>Ventas al mes</span></div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="value-box">
                 <h2 class="mb-0"><Counter :value="2.648" /></h2>
@@ -42,10 +42,10 @@
       <div class="col-md-6 col-lg-3">
         <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
           <div class="iq-card-body">
-            <div class="text-center"><span>{{ $t('dashboard2.card2')}}</span></div>
+            <div class="text-center"><span>Productos en Stock</span></div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="value-box">
-                <h2 class="mb-0"><Counter :value="89.6" /></h2>
+                <h2 class="mb-0"><Counter :value="898" /></h2>
                 <p class="mb-0 pl-2 text-secondary line-height"> 8.64% </p>
               </div>
               <div class="iq-iconbox iq-bg-info">
@@ -61,7 +61,7 @@
       <div class="col-md-6 col-lg-3">
         <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
           <div class="iq-card-body">
-            <div class="text-center"><span>{{ $t('dashboard2.card3')}}</span></div>
+            <div class="text-center"><span>Ventas al Contado</span></div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="value-box">
                 <h2 class="mb-0"><Counter :value="826" /></h2>
@@ -80,10 +80,10 @@
       <div class="col-md-6 col-lg-3">
         <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
           <div class="iq-card-body">
-            <div class="text-center"><span>{{ $t('dashboard2.card4')}}</span></div>
+            <div class="text-center"><span>Ventas a Credito</span></div>
             <div class="d-flex justify-content-between align-items-center">
               <div class="value-box">
-                <h2 class="mb-0"><Counter :value="7.55" /></h2>
+                <h2 class="mb-0"><Counter :value="200" /></h2>
                 <p class="mb-0 pl-2 text-secondary line-height"> 25.5% </p>
               </div>
               <div class="iq-iconbox iq-bg-primary">
@@ -102,7 +102,7 @@
       <b-col lg="8">
         <iq-card class="iq-card-block iq-card-stretch iq-card-height overflow-hidden">
           <template v-slot:headerTitle>
-            <h4 class="card-title">{{ $t('dashboard2.featureTableTitle')}}</h4>
+            <h4 class="card-title">Ultimas Transacciones</h4>
           </template>
           <template v-slot:body>
             <b-table responsive :items="items" class="mb-0" borderless>
@@ -119,7 +119,7 @@
       <b-col lg="4" md="12">
         <iq-card class="iq-card-block iq-card-stretch iq-card-height">
           <template v-slot:headerTitle>
-            <h4 class="card-title">{{ $t('dashboard2.summary')}}</h4>
+            <h4 class="card-title">Reporte al 31/08/2021</h4>
           </template>
           <template v-slot:headerAction>
             <b-dropdown id="dropdownMenuButton5" right variant="none" data-toggle="dropdown">
@@ -134,14 +134,14 @@
             </b-dropdown>
           </template>
           <template v-slot:body>
-            <p class="mb-0">{{ $t('dashboard2.totalLikeComment')}}</p>
+            <p class="mb-0">Todas las transacciones</p>
             <div class="m-0 p-0 d-flex flex-wrap align-items-center justify-content-between">
               <div class="col-md-6">
                 <div class="d-flex align-items-center  mt-3">
                   <div class="iq-scale-border mr-3 like-block"></div>
                   <div class="iq-scale-content">
-                    <h6>2.864</h6>
-                    <p class="mb-0">Likes</p>
+                    <h6>13.345</h6>
+                    <p class="mb-0">Productos Ingresados</p>
                   </div>
                 </div>
               </div>
@@ -149,8 +149,8 @@
                 <div class="d-flex align-items-center  mt-3">
                   <div class="iq-scale-border mr-3 comment-block"></div>
                   <div class="iq-scale-content">
-                    <h6>624</h6>
-                    <p class="mb-0">Comments</p>
+                    <h6>10.278</h6>
+                    <p class="mb-0">Ventas al contado</p>
                   </div>
                 </div>
               </div>
@@ -158,8 +158,8 @@
                 <div class="d-flex align-items-center mt-4">
                   <div class="iq-scale-border mr-3 share-block"></div>
                   <div class="iq-scale-content">
-                    <h6>1.75</h6>
-                    <p class="mb-0">Share</p>
+                    <h6>2.456</h6>
+                    <p class="mb-0">Ventas a Credito</p>
                   </div>
                 </div>
               </div>
@@ -168,7 +168,7 @@
                   <div class="iq-scale-border mr-3 repost-block"></div>
                   <div class="iq-scale-content">
                     <h6>345</h6>
-                    <p class="mb-0">Repost</p>
+                    <p class="mb-0">Devoluciones</p>
                   </div>
                 </div>
               </div>
@@ -176,8 +176,8 @@
                 <div class="d-flex align-items-center mt-4">
                   <div class="iq-scale-border mr-3 view-block"></div>
                   <div class="iq-scale-content">
-                    <h6>845</h6>
-                    <p class="mb-0">Views</p>
+                    <h6>175</h6>
+                    <p class="mb-0">Clientes</p>
                   </div>
                 </div>
               </div>
@@ -185,120 +185,12 @@
                 <div class="d-flex align-items-center mt-4">
                   <div class="iq-scale-border mr-3 post-block"></div>
                   <div class="iq-scale-content">
-                    <h6>1200</h6>
-                    <p class="mb-0">Posts</p>
+                    <h6>25</h6>
+                    <p class="mb-0">Productos</p>
                   </div>
                 </div>
               </div>
             </div>
-          </template>
-        </iq-card>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col lg="12">
-        <iq-card class="iq-card-block iq-card-stretch iq-card-height">
-          <template v-slot:headerTitle>
-            <h4 class="card-title">{{ $t('dashboard2.bestPost')}}</h4>
-          </template>
-          <template v-slot:body>
-            <Swiper                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             :option="options" >
-              <template v-slot:nav>
-                <SwiperNav />
-              </template>
-              <SwiperSlide class="d-flex align-items-center">
-                <div class="post-image">
-                  <a href="javascript:void(0);">
-                    <img :src="require('../../assets/images/page-img/p-2.jpg')" alt="post-image" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="post-content pl-3 pr-3">
-                  <h4>How to Like Posts</h4>
-                  <h3 class="mt-2 mb-2">89.64%</h3>
-                  <Progressbar :value="89" class="mb-3" color="primary" />
-                  <div class="text-center d-flex align-items-center justify-content-between">
-                    <div class="iq-post-likes text-left">
-                      <a href="#" class="text-secondary"><i class="ri-heart-line mr-2" />6.2K</a>
-                    </div>
-                    <div class="iq-post-comments text-left ml-2 mr-2">
-                      <a href="#" class="text-secondary"><i class="ri-chat-1-fill mr-2" />6.2K</a>
-                    </div>
-                    <div class="iq-post-save text-left">
-                      <a href="#" class="text-secondary"><i class="ri-save-line mr-2" />6.2K</a>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide class="d-flex align-items-center">
-                <div class="post-image">
-                  <a href="javascript:void(0);">
-                    <img :src="require('../../assets/images/page-img/p-3.jpg')" alt="post-image" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="post-content pl-3 pr-3">
-                  <h4>How to Comments Posts</h4>
-                  <h3 class="mt-2 mb-2">89.64%</h3>
-                  <Progressbar :value="89" class="mb-3" color="primary" />
-                  <div class="text-center d-flex align-items-center justify-content-between">
-                    <div class="iq-post-likes text-left">
-                      <a href="#" class="text-secondary"><i class="ri-heart-line mr-2"></i>6.2K</a>
-                    </div>
-                    <div class="iq-post-comments text-left ml-2 mr-2">
-                      <a href="#" class="text-secondary"><i class="ri-chat-1-fill mr-2"></i>6.2K</a>
-                    </div>
-                    <div class="iq-post-save text-left">
-                      <a href="#" class="text-secondary"><i class="ri-save-line mr-2"></i>6.2K</a>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide class="d-flex align-items-center">
-                <div class="post-image">
-                  <a href="javascript:void(0);">
-                    <img :src="require('../../assets/images/page-img/p-4.jpg')" alt="post-image" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="post-content pl-3 pr-3">
-                  <h4>How to Share Posts</h4>
-                  <h3 class="mt-2 mb-2">89.64%</h3>
-                  <Progressbar :value="90" class="mb-3" />
-                  <div class="text-center d-flex align-items-center justify-content-between">
-                    <div class="iq-post-likes text-left">
-                      <a href="#"><i class="ri-heart-line mr-2"></i>6.2K</a>
-                    </div>
-                    <div class="iq-post-comments text-left ml-2 mr-2">
-                      <a href="#"><i class="ri-chat-1-fill mr-2"></i>6.2K</a>
-                    </div>
-                    <div class="iq-post-save text-left">
-                      <a href="#"><i class="ri-save-line mr-2"></i>6.2K</a>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide class="d-flex align-items-center">
-                <div class="post-image">
-                  <a href="javascript:void(0);">
-                    <img :src="require('../../assets/images/page-img/p-5.jpg')" alt="post-image" class="img-fluid rounded">
-                  </a>
-                </div>
-                <div class="post-content pl-3 pr-3">
-                  <h4>How to Repost </h4>
-                  <h3 class="mt-2 mb-2">89.64%</h3>
-                  <Progressbar :value="80" class="mb-3" />
-                  <div class="text-center d-flex align-items-center justify-content-between">
-                    <div class="iq-post-likes text-left">
-                      <a href="#" class="text-secondary"><i class="ri-heart-line mr-2"></i>6.2K</a>
-                    </div>
-                    <div class="iq-post-comments text-left ml-2 mr-2">
-                      <a href="#" class="text-secondary"><i class="ri-chat-1-fill mr-2"></i>6.2K</a>
-                    </div>
-                    <div class="iq-post-save text-left">
-                      <a href="#" class="text-secondary"><i class="ri-save-line mr-2"></i>6.2K</a>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
           </template>
         </iq-card>
       </b-col>
@@ -311,13 +203,10 @@ import AmChart from '../../components/core/charts/AmChart'
 import { Arabic } from 'flatpickr/dist/l10n/ar'
 import { english } from 'flatpickr/dist/l10n/default'
 import { mapGetters } from 'vuex'
-import Swiper from '../../components/core/slider/Swiper'
-import SwiperNav from '../../components/core/slider/SwiperNav'
-import SwiperSlide from '../../components/core/slider/SwiperSlide'
 import Counter from '../../components/core/counter/Counter'
 export default {
   name: 'Dashboard2',
-  components: { AmChart, Counter, Swiper, SwiperNav, SwiperSlide },
+  components: { AmChart, Counter },
   mounted () {
     core.index()
   },
@@ -803,56 +692,56 @@ export default {
         }
       },
       items: [{
-        package_no: '#0879985',
-        date: '26/12/2019',
-        delivery: '30/12/2019',
+        Pedido: '#0879985',
+        Fecha: '26/12/2019',
+        Cliente: 'Juan Perez',
         status: {
-          name: 'Moving',
+          name: 'Entregado',
           color: 'success'
         },
-        location: 'Victoria 8007 Australia',
+        Direccion: 'Miraflores, av 1',
         progress: {
           count: 90,
           color: 'success'
         }
       },
       {
-        package_no: '#0879984',
-        date: '23/12/2019',
-        delivery: '27/12/2019',
+        Pedido: '#0879984',
+        Fecha: '23/12/2020',
+        Cliente: 'Cinthia Roca',
         status: {
-          name: 'Pending',
+          name: 'Pendiente',
           color: 'warning text-white'
         },
-        location: 'Athens 2745 Greece',
+        Direccion: 'Sopocachi, plaza España',
         progress: {
           count: 70,
           color: 'warning'
         }
       },
       {
-        package_no: '#0879983',
-        date: '18/12/2019',
-        delivery: '30/12/2019',
+        Pedido: '#0879983',
+        Fecha: '18/12/2020',
+        Cliente: 'Juan Perez',
         status: {
-          name: 'Canceled',
+          name: 'Cancelado',
           color: 'danger'
         },
-        location: 'Victoria 8007 Australia',
+        Direccion: 'El Alto, Ciudad Satelite',
         progress: {
           count: 45,
           color: 'danger'
         }
       },
       {
-        package_no: '#0879982',
-        date: '14/12/2019',
-        delivery: '20/12/2019',
+        Pedido: '#0879982',
+        Fecha: '14/12/2020',
+        Cliente: 'Cinthia Roca',
         status: {
-          name: 'Working',
+          name: 'A credito',
           color: 'info'
         },
-        location: 'Delhi 0014 India',
+        Direccion: 'Calacoto, av Sanchez Bustamante',
         progress: {
           count: 90,
           color: 'info'
@@ -1025,7 +914,7 @@ export default {
       ],
       averageList: [
         {
-          title: 'AVG Impressions',
+          title: 'Ventas',
           icons: { icon: 'ri-arrow-down-line', color: 'danger' },
           number: '2.648',
           percentage: '26.84'
