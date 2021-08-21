@@ -11,22 +11,11 @@
           </div>
           <div class="col-sm-6 text-center">
             <div class="sign-in-detail text-white" :style="'background: url('+bgImageURL+') no-repeat 0 0; background-size: cover;'">
-              <a class="sign-in-logo mb-5" href="#"><img :src="logo" class="img-fluid" alt="logo"></a>
               <Swiper :options="options">
                 <SwiperSlide class="item">
                   <img :src="require('../../assets/images/login/login-1.png')" class="img-fluid mb-4" alt="logo">
-                  <h4 class="mb-1 text-white">Manage your orders</h4>
-                  <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                </SwiperSlide>
-                <SwiperSlide class="item">
-                  <img :src="require('../../assets/images/login/login-1.png')" class="img-fluid mb-4" alt="logo">
-                  <h4 class="mb-1 text-white">Manage your orders</h4>
-                  <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                </SwiperSlide>
-                <SwiperSlide class="item">
-                  <img :src="require('../../assets/images/login/login-1.png')" class="img-fluid mb-4" alt="logo">
-                  <h4 class="mb-1 text-white">Manage your orders</h4>
-                  <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                  <h4 class="mb-1 text-white">JACQARD</h4>
+                  <p>Gestión y preventa de productos.</p>
                 </SwiperSlide>
               </Swiper>
             </div>
